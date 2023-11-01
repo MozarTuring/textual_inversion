@@ -175,3 +175,19 @@ if __name__ == "__main__":
     Image.fromarray(grid.astype(np.uint8)).save(os.path.join(outpath, f'{prompt.replace(" ", "-")}.jpg'))
 
     print(f"Your samples are ready and waiting four you here: \n{outpath} \nEnjoy.")
+
+
+"""shell_start_mjw
+source /home/maojingwei/project/textual_inversion/myRequirements.sh run
+cd /home/maojingwei/project/textual_inversion/
+
+python scripts/txt2img.py --ddim_eta 0.0 \
+                          --n_samples 8 \
+                          --n_iter 2 \
+                          --scale 10.0 \
+                          --ddim_steps 50 \
+                          --embedding_path /home/maojingwei/project/textual_inversion/logs/cat_statue2023-07-21T11-51-24_txt2img-1p4B-finetune/checkpoints/embeddings_gs-6099.pt \
+                          --ckpt_path model.ckpt \
+                          --prompt "Painting of two * fishing on a boat"
+
+shell_end_mjw"""

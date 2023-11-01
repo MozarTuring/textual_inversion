@@ -823,3 +823,18 @@ if __name__ == "__main__":
             os.rename(logdir, dst)
         if trainer.global_rank == 0:
             print(trainer.profiler.summary())
+
+
+"""shell_start_mjw
+source /home/maojingwei/project/textual_inversion/myRequirements.sh run
+cd /home/maojingwei/project/textual_inversion
+
+python main.py --base configs/latent-diffusion/txt2img-1p4B-finetune.yaml \
+               -t \
+               --actual_resume model.ckpt \
+               -n "" \
+               --gpus 0, \
+               --data_root /home/maojingwei/project/diffusers-huggingFace/mjw_dataset/cat_statue \
+               --init_word cat
+
+shell_end_mjw"""

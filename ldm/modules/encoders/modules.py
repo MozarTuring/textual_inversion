@@ -76,7 +76,7 @@ class BERTTokenizer(AbstractEncoder):
     def __init__(self, device="cuda", vq_interface=True, max_length=77):
         super().__init__()
         from transformers import BertTokenizerFast  # TODO: add to reuquirements
-        self.tokenizer = BertTokenizerFast.from_pretrained("bert-base-uncased")
+        self.tokenizer = BertTokenizerFast.from_pretrained("/home/maojingwei/project/pretrained_models/bert-base-uncased")
         self.device = device
         self.vq_interface = vq_interface
         self.max_length = max_length
